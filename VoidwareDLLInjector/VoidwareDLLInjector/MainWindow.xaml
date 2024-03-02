@@ -1,0 +1,95 @@
+﻿<Window
+    x:Class="VoidwareDLLInjector.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Voidware DLL Injector"
+    Width="800"
+    Height="450"
+    Background="#FF2D2D30">
+    <Window.Resources>
+        <!--  Styling our buttons with a touch of darkness and a hint of elegance  -->
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="#FFF5F5F5" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Background" Value="#FF3F3F46" />
+            <Setter Property="BorderBrush" Value="#FF007ACC" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <!--  Ensuring our buttons are as smooth as our operation  -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <!--  The beacon to start our DLL hunt  -->
+        <Button
+            Width="120"
+            Height="40"
+            Margin="10,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="AddDllButton_Click"
+            Content="Select DLL"
+            Style="{StaticResource ButtonStyle}" />
+        <!--  Where we tweak the knobs and dials  -->
+        <Button
+            Width="120"
+            Height="40"
+            Margin="0,10,10,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="SettingsButton_Click"
+            Content="Settings"
+            Style="{StaticResource ButtonStyle}" />
+        <!--  A list to behold the might of running applications  -->
+        <ListBox
+            x:Name="OpenApplicationsListBox"
+            Width="362"
+            Height="322"
+            Margin="10,60,0,0"
+            VerticalAlignment="Top"
+            Background="#FF444444"
+            Foreground="#FFF5F5F5" />
+        <!--  Our arsenal of DLLs ready for deployment  -->
+        <ListBox
+            x:Name="QuickInjectListBox"
+            Width="120"
+            Height="236"
+            Margin="0,60,10,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Background="#FF444444"
+            Foreground="#FFF5F5F5" />
+        <!--  Adding to our arsenal  -->
+        <Button
+            Width="120"
+            Height="40"
+            Margin="0,306,10,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="AddDllButton_Click"
+            Content="Add DLL"
+            Style="{StaticResource ButtonStyle}" />
+        <!--  The button that unleashes chaos (or just injects a DLL)  -->
+        <Button
+            Width="120"
+            Height="40"
+            Margin="0,356,10,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="InjectDllButton_Click"
+            Content="Inject DLL"
+            Style="{StaticResource ButtonStyle}" />
+    </Grid>
+</Window>
