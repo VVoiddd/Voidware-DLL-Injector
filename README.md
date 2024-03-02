@@ -22,7 +22,7 @@ You can get started with the Voidware DLL Injector in two ways:
 
 1. **Using the Precompiled Executable:**
 
-   Download the latest `VoidwareDLLInjector.exe` from the [releases page](https://github.com/VVoiddd/Voidware-DLL-Injector/releases) and run it on your Windows machine.
+   Download the latest `VoidwareDLLInjector.exe` from the [releases page](https://github.com/VVoiddd/Voidware-DLL-Injector) and run it on your Windows machine.
 
 2. **Compiling from Source:**
 
